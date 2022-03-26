@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(217, 19%, 24%);
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+}
+
+.container {
+    width: calc(375px + 30%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: hsl(217, 19%, 38%);
+    border: 2px solid transparent;
+    border-radius: 1rem;
+}
+
+.id {
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: hsl(150, 100%, 66%);
+    margin: 2rem auto;
+    font-size: 20px;
+}
+
+#advise_text::before {
+    content: '\201C  ';
+}
+#advise_text::after {
+    content: '  \201D';
+}
+
+.text {
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.icon_divider-decstop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 2rem 3rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    background-color: hsl(150, 100%, 66%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 500ms ease-in ;
+}
+
+.icon:hover {
+    -webkit-box-shadow: 2px 2px 54px 2px hsl(150, 100%, 66%);-moz-box-shadow: 2px 2px 54px 2px hsl(150, 100%, 66%);
+    box-shadow: 2px 2px 54px 2px hsl(150, 100%, 66%);
+}
+
+.first_icon {
+    display: block;
+}
+.second_icon {
+    display: none;
+}
+
+@media screen and (max-width: 1070px) {
+    .first_icon {
+        display: none;
+    }
+    .second_icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 375px;
+    }
+}
